@@ -21,6 +21,7 @@
 		05B49E792CE4E47D0059F2B1 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E782CE4E47D0059F2B1 /* UIView+.swift */; };
 		05B49E7B2CE501B40059F2B1 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7A2CE501B40059F2B1 /* AlertDisplayable.swift */; };
 		05B49E7D2CE5025C0059F2B1 /* KeyboardDismissible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7C2CE5025C0059F2B1 /* KeyboardDismissible.swift */; };
+		05B49E7F2CE5CEE40059F2B1 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7E2CE5CEE40059F2B1 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		05B49E782CE4E47D0059F2B1 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		05B49E7A2CE501B40059F2B1 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		05B49E7C2CE5025C0059F2B1 /* KeyboardDismissible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissible.swift; sourceTree = "<group>"; };
+		05B49E7E2CE5CEE40059F2B1 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				05B49E782CE4E47D0059F2B1 /* UIView+.swift */,
+				05B49E7E2CE5CEE40059F2B1 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				05B49E7B2CE501B40059F2B1 /* AlertDisplayable.swift in Sources */,
 				05B49E532CE4E10E0059F2B1 /* AppDelegate.swift in Sources */,
 				05B49E542CE4E10E0059F2B1 /* SceneDelegate.swift in Sources */,
+				05B49E7F2CE5CEE40059F2B1 /* UIViewController+.swift in Sources */,
 				05B49E7D2CE5025C0059F2B1 /* KeyboardDismissible.swift in Sources */,
 				05B49E6F2CE4E2DF0059F2B1 /* ProfileCardVC.swift in Sources */,
 				05B49E752CE4E3F50059F2B1 /* BaseView.swift in Sources */,
