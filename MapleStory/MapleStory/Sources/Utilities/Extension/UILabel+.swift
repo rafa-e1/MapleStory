@@ -25,4 +25,17 @@ extension UILabel {
         font = .systemFont(ofSize: size, weight: weight)
         self.numberOfLines = numberOfLines
     }
+
+    func configureDotSeparatorLabel(
+        text: String = "•",
+        color: UIColor = .gray,
+        size: CGFloat = 16
+    ) {
+        configureLabel(
+            text,
+            color: color,
+            size: size,
+            weight: .regular
+        )
+    }
 }
