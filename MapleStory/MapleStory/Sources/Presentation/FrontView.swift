@@ -23,68 +23,30 @@ final class FrontView: BaseView {
     // MARK: - UI
 
     override func setStyle() {
-        characterGuildNameLabel.do {
-            $0.configureLabel(
-                size: 30,
-                weight: .heavy,
-                numberOfLines: 0
-            )
-        }
+        characterGuildNameLabel.configureLabel(size: 30, weight: .heavy, numberOfLines: 0)
+        profileImageView.contentMode = .scaleAspectFill
+        characterNameLabel.configureLabel(size: 40, weight: .semibold, numberOfLines: 0)
 
-        profileImageView.do {
-            $0.contentMode = .scaleAspectFill
-        }
+        characterClassLabel.configureLabel(
+            color: .systemBlue,
+            size: 20,
+            weight: .semibold,
+            numberOfLines: 0
+        )
 
-        characterNameLabel.do {
-            $0.configureLabel(
-                size: 40,
-                weight: .semibold,
-                numberOfLines: 0
-            )
-        }
+        levelTitleLabel.configureLabel("Lv.", size: 30)
+        characterLevelLabel.configureLabel(color: .systemRed, size: 80)
 
-        characterClassLabel.do {
-            $0.configureLabel(
-                color: .systemBlue,
-                size: 20,
-                weight: .semibold,
-                numberOfLines: 0
-            )
-        }
-
-        levelTitleLabel.do {
-            $0.configureLabel(
-                "Lv.",
-                size: 30,
-                weight: .regular
-            )
-        }
-
-        characterLevelLabel.do {
-            $0.configureLabel(
-                color: .systemRed,
-                size: 80,
-                weight: .regular
-            )
-        }
-
-        levelStackView.do {
-            $0.configureStackView(
-                addArrangedSubviews: levelTitleLabel, characterLevelLabel,
-                axis: .horizontal,
-                alignment: .lastBaseline,
-                distribution: .fillProportionally,
-                spacing: 10
-            )
-        }
+        levelStackView.configureStackView(
+            addArrangedSubviews: levelTitleLabel, characterLevelLabel,
+            axis: .horizontal,
+            alignment: .lastBaseline,
+            distribution: .fillProportionally,
+            spacing: 10
+        )
 
         guideLabel.do {
-            $0.configureLabel(
-                "탭하여 카드 뒤집기",
-                color: .white.withAlphaComponent(0.8),
-                size: 20,
-                weight: .regular
-            )
+            $0.configureLabel("탭하여 카드 뒤집기", color: .white.withAlphaComponent(0.8), size: 20)
 
             $0.animateLabel(
                 duration: 0.8,
