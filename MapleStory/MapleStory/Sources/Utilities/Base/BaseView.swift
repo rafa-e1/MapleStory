@@ -15,7 +15,7 @@ class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        backgroundColor = .systemBackground
+        backgroundColor = .backgroundColor
 
         setStyle()
         setHierarchy()
