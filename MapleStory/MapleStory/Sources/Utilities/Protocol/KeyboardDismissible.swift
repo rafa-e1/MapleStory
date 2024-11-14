@@ -16,7 +16,7 @@ extension KeyboardDismissible where Self: UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tapGesture = UITapGestureRecognizer(
             target: self,
-            action: #selector(handleDismissal)
+            action: #selector(dismissKeyboard)
         )
 
         view.addGestureRecognizer(tapGesture)
