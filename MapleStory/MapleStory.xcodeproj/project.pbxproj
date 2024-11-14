@@ -22,6 +22,7 @@
 		05B49E7B2CE501B40059F2B1 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7A2CE501B40059F2B1 /* AlertDisplayable.swift */; };
 		05B49E7D2CE5025C0059F2B1 /* KeyboardDismissible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7C2CE5025C0059F2B1 /* KeyboardDismissible.swift */; };
 		05B49E7F2CE5CEE40059F2B1 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E7E2CE5CEE40059F2B1 /* UIViewController+.swift */; };
+		05B49E822CE5D8B50059F2B1 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E812CE5D8B50059F2B1 /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		05B49E7A2CE501B40059F2B1 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		05B49E7C2CE5025C0059F2B1 /* KeyboardDismissible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissible.swift; sourceTree = "<group>"; };
 		05B49E7E2CE5CEE40059F2B1 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		05B49E812CE5D8B50059F2B1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		05B49E6D2CE4E2A60059F2B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				05B49E802CE5D8990059F2B1 /* Component */,
 				05B49E6E2CE4E2DF0059F2B1 /* ProfileCardVC.swift */,
 			);
 			path = Presentation;
@@ -152,6 +155,14 @@
 				05B49E7C2CE5025C0059F2B1 /* KeyboardDismissible.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		05B49E802CE5D8990059F2B1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				05B49E812CE5D8B50059F2B1 /* CircularProgressView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				05B49E7F2CE5CEE40059F2B1 /* UIViewController+.swift in Sources */,
 				05B49E7D2CE5025C0059F2B1 /* KeyboardDismissible.swift in Sources */,
 				05B49E6F2CE4E2DF0059F2B1 /* ProfileCardVC.swift in Sources */,
+				05B49E822CE5D8B50059F2B1 /* CircularProgressView.swift in Sources */,
 				05B49E752CE4E3F50059F2B1 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
