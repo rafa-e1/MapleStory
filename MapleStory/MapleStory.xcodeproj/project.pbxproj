@@ -28,6 +28,7 @@
 		05B49E882CE5E0630059F2B1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E872CE5E0630059F2B1 /* UIColor+.swift */; };
 		05B49E8A2CE5E1ED0059F2B1 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E892CE5E1ED0059F2B1 /* UILabel+.swift */; };
 		05B49E8C2CE5E4D30059F2B1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E8B2CE5E4D30059F2B1 /* UIStackView+.swift */; };
+		05B49E962CE5FFBA0059F2B1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E952CE5FFBA0059F2B1 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		05B49E892CE5E1ED0059F2B1 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		05B49E8B2CE5E4D30059F2B1 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		05B49E8D2CE5FA590059F2B1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		05B49E952CE5FFBA0059F2B1 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		05B49E8E2CE5FB690059F2B1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				05B49E912CE5FF900059F2B1 /* Foundation */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -204,6 +207,38 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05B49E912CE5FF900059F2B1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				05B49E942CE5FFA50059F2B1 /* Core */,
+				05B49E932CE5FF9E0059F2B1 /* Error */,
+				05B49E922CE5FF980059F2B1 /* Helper */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		05B49E922CE5FF980059F2B1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				05B49E952CE5FFBA0059F2B1 /* Environment.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		05B49E932CE5FF9E0059F2B1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		05B49E942CE5FFA50059F2B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B49E792CE4E47D0059F2B1 /* UIView+.swift in Sources */,
+				05B49E962CE5FFBA0059F2B1 /* Environment.swift in Sources */,
 				05B49E772CE4E4490059F2B1 /* BaseViewController.swift in Sources */,
 				05B49E7B2CE501B40059F2B1 /* AlertDisplayable.swift in Sources */,
 				05B49E532CE4E10E0059F2B1 /* AppDelegate.swift in Sources */,
@@ -326,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://open.api.nexon.com";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WULLR98GP;
@@ -360,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://open.api.nexon.com";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WULLR98GP;
