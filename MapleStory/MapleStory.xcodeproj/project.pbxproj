@@ -50,6 +50,7 @@
 		05B49E872CE5E0630059F2B1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		05B49E892CE5E1ED0059F2B1 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		05B49E8B2CE5E4D30059F2B1 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		05B49E8D2CE5FA590059F2B1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		05B49E282CE4E1080059F2B1 = {
 			isa = PBXGroup;
 			children = (
+				05B49E8D2CE5FA590059F2B1 /* Config.xcconfig */,
 				05B49E522CE4E10E0059F2B1 /* MapleStory */,
 				05B49E322CE4E1080059F2B1 /* Products */,
 			);
@@ -97,7 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				05B49E6C2CE4E2990059F2B1 /* Application */,
+				05B49E902CE5FB830059F2B1 /* Model */,
 				05B49E6D2CE4E2A60059F2B1 /* Presentation */,
+				05B49E8F2CE5FB770059F2B1 /* DTO */,
+				05B49E8E2CE5FB690059F2B1 /* Network */,
 				05B49E702CE4E3800059F2B1 /* Utilities */,
 			);
 			path = Sources;
@@ -178,6 +183,27 @@
 				05B49E812CE5D8B50059F2B1 /* CircularProgressView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		05B49E8E2CE5FB690059F2B1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		05B49E8F2CE5FB770059F2B1 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		05B49E902CE5FB830059F2B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +391,7 @@
 		};
 		05B49E472CE4E1090059F2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05B49E8D2CE5FA590059F2B1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -428,6 +455,7 @@
 		};
 		05B49E482CE4E1090059F2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05B49E8D2CE5FA590059F2B1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
