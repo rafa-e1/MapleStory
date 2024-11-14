@@ -26,4 +26,9 @@ extension UIView {
             animations: animations
         )
     }
+
+    func applyLineSeparator() {
+        backgroundColor = .gray
+        alpha = 0.5
+    }
 }
