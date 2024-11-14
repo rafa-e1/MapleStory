@@ -12,4 +12,18 @@ extension UIView {
     func addSubviews(_ views: UIView...) {
         views.forEach { addSubview($0) }
     }
+
+    func animateLabel(
+        duration: Double,
+        delay: Double = 0,
+        options: UIView.AnimationOptions,
+        animations: @escaping () -> Void
+    ) {
+        UIView.animate(
+            withDuration: duration,
+            delay: delay,
+            options: options,
+            animations: animations
+        )
+    }
 }
