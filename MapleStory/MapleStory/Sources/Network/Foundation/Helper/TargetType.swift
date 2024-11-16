@@ -15,5 +15,5 @@ protocol TargetType {
     var method: HTTPMethod { get }
     var task: APITask { get }
     var parameters: Parameters? { get }
-    var headers: HTTPHeaders? { get }
+    var headers: HTTPHeaders { get }
 }
