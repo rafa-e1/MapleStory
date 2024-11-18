@@ -22,8 +22,8 @@ struct UserService {
             responseType: CharacterOCIDResponseDTO.self
         ) { result in
             switch result {
-            case .success(let characterResponse):
-                completion(.success(characterResponse.ocid))
+            case .success(let result):
+                completion(.success(result.ocid))
             case .failure:
                 completion(.failure(.invalidResponse))
             }
