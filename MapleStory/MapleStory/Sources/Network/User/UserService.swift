@@ -29,4 +29,23 @@ struct UserService {
             }
         }
     }
+
+    static func getCharacterBasicInfo(
+        ocid: String,
+        completion: @escaping (Result<CharacterBasicInfo, NetworkError>) -> Void
+    ) {
+        let target = UserTarget.getCharacterBasicInfo(ocid: ocid)
+
+        NetworkService.shared.request(
+            target: target,
+            responseType: CharacterBasicInfoResponseDTO.self
+        ) { result in
+            switch result {
+            case .success(let result):
+                completion(.success(result.toModel()))
+            case .failure:
+                completion(.failure(.invalidResponse))
+            }
+        }
+    }
 }
