@@ -48,4 +48,23 @@ struct UserService {
             }
         }
     }
+
+    static func getCharacterPopularity(
+        ocid: String,
+        completion: @escaping (Result<Int, NetworkError>) -> Void
+    ) {
+        let target = UserTarget.getCharacterPopularity(ocid: ocid)
+
+        NetworkService.shared.request(
+            target: target,
+            responseType: CharacterPopularityResponseDTO.self
+        ) { result in
+            switch result {
+            case .success(let result):
+                completion(.success(result.popularity))
+            case .failure:
+                completion(.failure(.invalidResponse))
+            }
+        }
+    }
 }
