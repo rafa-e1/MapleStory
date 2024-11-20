@@ -19,7 +19,31 @@ final class FrontView: BaseView {
     private let characterLevelLabel = UILabel()
     private let levelStackView = UIStackView()
     private let guideLabel = UILabel()
-    
+
+    // MARK: - Initializer
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        animateInstructionLabel()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+
+    private func animateInstructionLabel() {
+        UIView.animate(
+            withDuration: 0.8,
+            delay: 0,
+            options: [.autoreverse, .repeat, .allowUserInteraction],
+            animations: {
+                self.guideLabel.alpha = 0
+            }
+        )
+    }
+
     // MARK: - UI
 
     override func setStyle() {
