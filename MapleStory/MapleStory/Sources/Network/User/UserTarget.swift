@@ -17,8 +17,8 @@ enum UserTarget {
 
 extension UserTarget: TargetType {
 
-    var baseURL: URL {
-        return URL(string: Environment.baseURL)!
+    var baseURL: String {
+        return Environment.baseURL
     }
     
     var path: String {

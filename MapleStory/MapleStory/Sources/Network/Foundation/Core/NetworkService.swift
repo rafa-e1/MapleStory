@@ -20,17 +20,7 @@ final class NetworkService {
         responseType: T.Type,
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
-        guard var urlComponents = URLComponents(
-            url: target.baseURL,
-            resolvingAgainstBaseURL: true
-        ) else {
-            completion(.failure(.invalidURL))
-            return
-        }
-
-        urlComponents.path = target.path
-
-        guard let url = urlComponents.url else {
+        guard let url = URL(string: "\(target.baseURL)\(target.path)")?.absoluteString else {
             completion(.failure(.invalidURL))
             return
         }

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol TargetType {
-    var baseURL: URL { get }
+    var baseURL: String { get }
     var path: String { get }
     var method: HTTPMethod { get }
     var task: APITask { get }
