@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 final class FrontView: BaseView {
 
     // MARK: - Properties
@@ -32,6 +34,20 @@ final class FrontView: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
 
+
+    // MARK: - Helpers
+
+    private func setProfileImage(from urlString: String?) {
+        guard let urlString = urlString, let url = URL(string: urlString) else {
+            profileImageView.image = UIImage(systemName: "person")
+            return
+        }
+
+        profileImageView.kf.setImage(
+            with: url,
+            options: [.cacheOriginalImage, .transition(.fade(0.2))]
+        )
+    }
 
     private func animateInstructionLabel() {
         UIView.animate(
