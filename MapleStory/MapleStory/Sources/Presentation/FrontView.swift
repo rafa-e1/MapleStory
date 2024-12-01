@@ -34,6 +34,15 @@ final class FrontView: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - API
+
+    func configure(data: CharacterBasicInfo) {
+        characterGuildNameLabel.text = data.characterGuildName
+        setProfileImage(from: data.characterImage)
+        characterNameLabel.text = data.characterName
+        characterClassLabel.text = data.characterClass
+        characterLevelLabel.text = "\(data.characterLevel)"
+    }
 
     // MARK: - Helpers
 
