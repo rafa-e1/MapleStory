@@ -32,6 +32,19 @@ final class ProfileCardVC: BaseViewController {
             switch result {
             case .success(let ocid):
                 print("DEBUG: \(characterName)님의 OCID - \(ocid)")
+                self.fetchCharacterBasicInfo(ocid: ocid)
+            case .failure(let failure):
+                print("DEBUG: \(failure)")
+            }
+        }
+    }
+
+    private func fetchCharacterBasicInfo(ocid: String) {
+        UserService.getCharacterBasicInfo(ocid: ocid) { result in
+            switch result {
+            case .success(let basicInfo):
+                print("DEBUG: \(basicInfo)")
+                self.frontView.configure(data: basicInfo)
             case .failure(let failure):
                 print("DEBUG: \(failure)")
             }
