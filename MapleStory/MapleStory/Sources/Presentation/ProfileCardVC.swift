@@ -22,6 +22,20 @@ final class ProfileCardVC: BaseViewController {
         super.viewDidLoad()
 
         setTapGestures()
+        fetchCharacterOCID(characterName: "조셉")
+    }
+
+    // MARK: - API
+
+    private func fetchCharacterOCID(characterName: String) {
+        UserService.getCharacterOCID(characterName: characterName) { result in
+            switch result {
+            case .success(let ocid):
+                print("DEBUG: \(characterName)님의 OCID - \(ocid)")
+            case .failure(let failure):
+                print("DEBUG: \(failure)")
+            }
+        }
     }
 
     // MARK: - Actions
