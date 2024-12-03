@@ -185,12 +185,12 @@ final class BackView: BaseView {
 
         characterNameLabel.snp.makeConstraints {
             $0.top.equalTo(circularProgressView.snp.bottom).offset(10)
-            $0.left.equalTo(expLabel)
+            $0.horizontalEdges.equalToSuperview().inset(20)
         }
 
         characterClassLabel.snp.makeConstraints {
             $0.top.equalTo(characterNameLabel.snp.bottom).offset(4)
-            $0.left.equalTo(characterNameLabel)
+            $0.horizontalEdges.equalToSuperview().inset(20)
         }
 
         topLineSeparatorView.snp.makeConstraints {
