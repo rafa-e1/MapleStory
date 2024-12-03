@@ -40,7 +40,6 @@ final class NetworkService {
                     let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(decodedResponse))
                 } catch let decodeError {
-                    print("DEBUG: Decoding error - \(decodeError.localizedDescription)")
                     completion(.failure(.decodeError))
                 }
             case .failure:
