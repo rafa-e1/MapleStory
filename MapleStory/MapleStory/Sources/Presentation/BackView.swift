@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 final class BackView: BaseView {
 
     // MARK: - Properties
@@ -60,6 +62,30 @@ final class BackView: BaseView {
     // MARK: Guide Text Section
 
     private let guideLabel = UILabel()
+
+    // MARK: - Helpers
+
+    func configureCharacterBaseInfo(data: CharacterBasicInfo) {
+        characterNameLabel.text = data.characterName
+        characterClassLabel.text = data.characterClass
+        levelLabel.text = "\(data.characterLevel)"
+        classLevelLabel.text = "\(data.characterClassLevel)"
+
+        characterGuildNameLabel.text = data.characterGuildName ?? "N/A"
+        worldNameLabel.text = data.worldName
+
+        let daysSince = daysSinceCreation(from: data.characterDateCreate)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        daysSinceCreationLabel.text = "+\(numberFormatter.string(from: NSNumber(value: daysSince)) ?? "0")일"
+
+        if let expRate = Float(data.characterExpRate) {
+            circularProgressView.progress = expRate / 100
+            expLabel.text = "EXP \(data.characterExpRate)%"
+        }
+
+        setProfileImage(from: data.characterImage)
+    }
 
     // MARK: - UI
 
@@ -231,5 +257,39 @@ final class BackView: BaseView {
             $0.horizontalEdges.equalToSuperview().inset(20)
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
+    }
+}
+
+// MARK: - Private Helpers
+
+private extension BackView {
+
+    func daysSinceCreation(from creationDateString: String) -> Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mmZ"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        guard let creationDate = dateFormatter.date(from: creationDateString) else {
+            print("날짜 파싱 실패")
+            return 0
+        }
+
+        let currentDate = Date()
+        let components = Calendar.current.dateComponents([.day], from: creationDate, to: currentDate)
+
+        return components.day ?? 0
+    }
+
+    func setProfileImage(from urlString: String?) {
+        guard let urlString = urlString, let url = URL(string: urlString) else {
+            profileImageView.image = UIImage(systemName: "person.circle.fill")
+            return
+        }
+
+        profileImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(systemName: "person.circle.fill"),
+            options: [.cacheOriginalImage, .transition(.fade(0.2))]
+        )
     }
 }
