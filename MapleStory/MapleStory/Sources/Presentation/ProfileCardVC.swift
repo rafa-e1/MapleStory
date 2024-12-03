@@ -45,6 +45,7 @@ final class ProfileCardVC: BaseViewController {
             case .success(let basicInfo):
                 print("DEBUG: \(basicInfo)")
                 self.frontView.configure(data: basicInfo)
+                self.backView.configureCharacterBaseInfo(data: basicInfo)
             case .failure(let failure):
                 print("DEBUG: \(failure)")
             }
