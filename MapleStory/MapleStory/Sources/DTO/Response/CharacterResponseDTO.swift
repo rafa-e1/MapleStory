@@ -73,3 +73,10 @@ extension CharacterBasicInfoResponseDTO {
         )
     }
 }
+
+extension CharacterPopularityResponseDTO {
+
+    func toModel() -> CharacterPopularity {
+        return .init(popularity: popularity)
+    }
+}
