@@ -51,7 +51,7 @@ struct UserService {
 
     static func getCharacterPopularity(
         ocid: String,
-        completion: @escaping (Result<Int, NetworkError>) -> Void
+        completion: @escaping (Result<CharacterPopularity, NetworkError>) -> Void
     ) {
         let target = UserTarget.getCharacterPopularity(ocid: ocid)
 
@@ -61,7 +61,7 @@ struct UserService {
         ) { result in
             switch result {
             case .success(let result):
-                completion(.success(result.popularity))
+                completion(.success(result.toModel()))
             case .failure:
                 completion(.failure(.invalidResponse))
             }
