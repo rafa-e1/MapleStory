@@ -87,6 +87,12 @@ final class BackView: BaseView {
         setProfileImage(from: data.characterImage)
     }
 
+    func configurePopularity(data: CharacterPopularity) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        popularityLabel.text = numberFormatter.string(from: NSNumber(value: data.popularity)) ?? "0"
+    }
+
     // MARK: - UI
 
     override func setStyle() {
